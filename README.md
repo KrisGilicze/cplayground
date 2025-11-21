@@ -74,7 +74,72 @@ cr <datei>.c  # kompiliert und führt aus
 -   Memory-Layout und Debugging
 -   Ownership-Konzepte in C
 
+## 🧠 Wichtige Erkenntnisse
+
+### Memory & Stack
+
+-   **Stack wächst rückwärts:** Variablen werden in umgekehrter Reihenfolge ihrer Deklaration im Speicher abgelegt (von hohen zu niedrigen Adressen)
+-   **Keine Garantie:** Die Reihenfolge lokaler Variablen ist implementation-defined - Compiler können optimieren und umordnen
+-   **Adressen zeigen auf Bytes:** Jede Adresse referenziert genau 1 Byte im Speicher
+-   **Keine Variable-Terminatoren:** Zwischen Variablen gibt es keine Markierungen - der Compiler weiß durch den Typ, wie viele Bytes zu lesen sind
+
+### Strings in C
+
+-   **String = Pointer:** Ein String ist nur die Adresse des ersten Zeichens (`char*`)
+-   **Null-Terminator:** Strings enden mit `\0` (1 Byte mit Wert 0, NICHT zwei Bytes `/` und `0`)
+-   **Keine String-Objekte:** C hat keinen String-Typ - nur char-Arrays mit `\0` am Ende
+-   **printf sucht `\0`:** String-Funktionen lesen solange, bis sie auf das Null-Byte treffen
+
+### Typen & Speicher
+
+-   **sizeof gibt Bytes zurück:**
+    -   `int` = 4 Bytes = 32 Bits → Wertebereich: 2^32 Werte
+    -   `float` = 4 Bytes
+    -   `char` = 1 Byte = 8 Bits → 2^8 = 256 Werte (0-255 oder -128 bis 127)
+-   **char ist ein Integer:** `char` ist nur eine 8-Bit-Zahl, die oft für Buchstaben genutzt wird
+-   **ASCII-Wert = gespeicherter Wert:** `'b'` und `98` sind identisch im Speicher
+
+### printf & Format-Specifier
+
+-   **printf ist ein Interpreter:** Parst Format-String und konvertiert Werte je nach Specifier
+-   **Gleicher Wert, verschiedene Ausgaben:**
+    -   `%c` → ASCII-Lookup → Zeichen
+    -   `%d` → Dezimal-ToString
+    -   `%x` → Hex-ToString
+    -   `%p` → Pointer-Formatter
+-   **Type Promotion:** `char` wird automatisch zu `int` promoted beim Funktionsaufruf
+
+### Kompilierung & Linking
+
+-   **`#include` kopiert KEINEN Code:** Nur Deklarationen (Function Signatures) werden eingefügt
+-   **Object Files (`.o`):** Intermediate Compilation - Machine Code mit unaufgelösten Symbolen
+-   **Dynamic Linking (Standard):** Executables sind klein, printf-Code kommt aus `libSystem.dylib` zur Laufzeit
+-   **Static Linking:** Printf-Code wird ins Binary kopiert → größere Executables
+-   **Stub & PLT:** Bei Dynamic Linking springt der Code über einen Stub zur echten Funktion
+-   **Header Files:** Müssen MANUELL geschrieben werden - nicht automatisch generiert!
+
+### Dateitypen
+
+| Datei | Beschreibung | Erstellt von |
+|-------|--------------|--------------|
+| `.c` | Source Code (Implementation) | Programmierer |
+| `.h` | Header (API/Deklarationen) | Programmierer |
+| `.o` | Object File (kompiliert, nicht gelinkt) | `gcc -c` |
+| `.out` / executable | Fertiges Programm | `gcc` (Linker) |
+| `.s` | Assembly Code | `gcc -S` |
+| `.a` | Static Library | `ar` |
+| `.so`/`.dylib` | Shared Library | `gcc -shared` |
+
+### Debugging & Tools
+
+-   **lldb:** LLVM Debugger für macOS (Apple Silicon)
+-   **`Ctrl+C`:** SIGINT - unterbricht Programm
+-   **`Ctrl+D`:** EOF - beendet interaktive Shells (lldb, fish, python)
+-   **Assembly:** ARM64 auf Apple Silicon Macs
+-   **Debug-Symbole:** `gcc -g` fügt Variablennamen für Debugger hinzu
+
 ## 📝 Notizen
 
 -   Copilot für C-Dateien deaktiviert, um eigenständiges Lernen zu fördern
 -   Jede Übung hat ihren eigenen Ordner mit selbsterklärendem Code
+-   Fish Shell Funktion `cr` für schnelles Compile & Run
