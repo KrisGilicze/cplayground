@@ -29,7 +29,12 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   Tausch mit temporärer Variable durchgeführt
     -   **Status:** Erfolgreich abgeschlossen
 
--   ⏳ **0.3 Pointer auf verschiedene Typen** - Noch nicht begonnen
+-   ✅ **0.3 Pointer auf verschiedene Typen** (`03_pointertypes/`)
+
+    -   int, float, char Variablen angelegt
+    -   Wert, Adresse und sizeof für jeden Typ ausgegeben
+    -   Memory-Layout und Stack-Organisation verstanden
+    -   **Status:** Erfolgreich abgeschlossen
 
 ### Stufe 1 — Pointer-Arithmetik
 
