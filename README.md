@@ -46,7 +46,11 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   `#define` für Konstanten korrekt verwendet
     -   **Status:** Erfolgreich abgeschlossen
 
--   ⏳ **1.2 Manuelle strlen-Funktion** - Noch nicht begonnen
+-   ✅ **1.2 Manuelle strlen-Funktion** (`12_manualstrlen/`)
+
+    -   Implementierte `my_strlen` mit reiner Pointer-Iteration (kein Indexing)
+    -   Länge über Pointer-Differenz ermittelt
+    -   **Status:** Erfolgreich abgeschlossen
 
 -   ⏳ **1.3 Pointer auf Pointer** - Noch nicht begonnen
 
