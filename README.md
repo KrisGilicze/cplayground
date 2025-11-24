@@ -52,7 +52,8 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   Länge über Pointer-Differenz ermittelt
     -   **Status:** Erfolgreich abgeschlossen
 
--   ⏳ **1.3 Pointer auf Pointer** - Noch nicht begonnen
+-   ⏳ **1.3 Pointer auf Pointer** - (`13_pointertopointer`)
+    -   **Status:** Erfolgreich abgeschlossen
 
 ### Stufe 2 — malloc/free
 
