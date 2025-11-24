@@ -38,7 +38,17 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
 
 ### Stufe 1 — Pointer-Arithmetik
 
--   ⏳ Noch nicht begonnen
+-   ✅ **1.1 Mini-Array-Debugger** (`11_miniarraydebug/`)
+
+    -   Array-Traversierung nur mit Pointern (`ptr++`)
+    -   Pointer-Arithmetik und Pointer-Differenz verstanden
+    -   While-Loop mit Pointer-Vergleich implementiert
+    -   `#define` für Konstanten korrekt verwendet
+    -   **Status:** Erfolgreich abgeschlossen
+
+-   ⏳ **1.2 Manuelle strlen-Funktion** - Noch nicht begonnen
+
+-   ⏳ **1.3 Pointer auf Pointer** - Noch nicht begonnen
 
 ### Stufe 2 — malloc/free
 
@@ -62,6 +72,7 @@ gcc -Wall -Wextra <datei>.c -o <output>
 ```
 
 **Fish Shell Shortcut:**
+
 ```fish
 cr <datei>.c  # kompiliert und führt aus
 ```
@@ -120,15 +131,15 @@ cr <datei>.c  # kompiliert und führt aus
 
 ### Dateitypen
 
-| Datei | Beschreibung | Erstellt von |
-|-------|--------------|--------------|
-| `.c` | Source Code (Implementation) | Programmierer |
-| `.h` | Header (API/Deklarationen) | Programmierer |
-| `.o` | Object File (kompiliert, nicht gelinkt) | `gcc -c` |
-| `.out` / executable | Fertiges Programm | `gcc` (Linker) |
-| `.s` | Assembly Code | `gcc -S` |
-| `.a` | Static Library | `ar` |
-| `.so`/`.dylib` | Shared Library | `gcc -shared` |
+| Datei               | Beschreibung                            | Erstellt von   |
+| ------------------- | --------------------------------------- | -------------- |
+| `.c`                | Source Code (Implementation)            | Programmierer  |
+| `.h`                | Header (API/Deklarationen)              | Programmierer  |
+| `.o`                | Object File (kompiliert, nicht gelinkt) | `gcc -c`       |
+| `.out` / executable | Fertiges Programm                       | `gcc` (Linker) |
+| `.s`                | Assembly Code                           | `gcc -S`       |
+| `.a`                | Static Library                          | `ar`           |
+| `.so`/`.dylib`      | Shared Library                          | `gcc -shared`  |
 
 ### Debugging & Tools
 
