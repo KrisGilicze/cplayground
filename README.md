@@ -53,11 +53,19 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   **Status:** Erfolgreich abgeschlossen
 
 -   ⏳ **1.3 Pointer auf Pointer** - (`13_pointertopointer`)
-    -   **Status:** Erfolgreich abgeschlossen
+    -   **Status:** In Bearbeitung
+    -   Hinweis: Schreibzugriff auf String-Literale kann zu undefiniertem Verhalten (z.B. SIGBUS) führen. Nutze stattdessen mutable `char[]`-Arrays oder Heap-Allokation (`malloc`) zum Experimentieren.
 
 ### Stufe 2 — malloc/free
 
--   ⏳ Noch nicht begonnen
+-   ✅ **2.1 Dynamisches Array** (`21_dynarray/`)
+
+    -   `make_array(n)` mit `malloc` implementiert
+    -   Korrekte Nutzung von `sizeof` und `size_t`-Zählern
+    -   Fehlerbehandlung für `malloc` ergänzt
+    -   **Status:** Erfolgreich abgeschlossen
+
+ -   ⏳ **2.2 Realloc-Simulation (manuell)** - Noch nicht begonnen
 
 ### Stufe 3 — Micro-Projekte
 
