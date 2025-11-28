@@ -65,7 +65,17 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   Fehlerbehandlung für `malloc` ergänzt
     -   **Status:** Erfolgreich abgeschlossen
 
- -   ⏳ **2.2 Realloc-Simulation (manuell)** - Noch nicht begonnen
+ -   ✅ **2.2 Realloc-Simulation (manuell)** (`22_realloc/`)
+
+     -   Manuelle Implementierung von `my_realloc`: verdoppelt Kapazität, kopiert Werte pointer-basiert, freed alten Buffer
+     -   Idiomatische Nutzung von `sizeof *ptr`, `size_t`-Zählern und OOM-Handling
+     -   **Status:** Erfolgreich abgeschlossen
+
+ -   ✅ **2.3 Dynamisches String Duplicator** (`23_dynstrcpy/`)
+
+     -   Implementierung von `my_strdup`: allokiert `size+1`, kopiert inklusive `\0`, gibt bei OOM `NULL` zurück
+     -   Null‑Termination und sichere Größe berücksichtigt
+     -   **Status:** Erfolgreich abgeschlossen
 
 ### Stufe 3 — Micro-Projekte
 
