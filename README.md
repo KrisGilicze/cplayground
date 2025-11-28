@@ -159,3 +159,7 @@ cr <datei>.c  # kompiliert und führt aus
 -   Copilot für C-Dateien deaktiviert, um eigenständiges Lernen zu fördern
 -   Jede Übung hat ihren eigenen Ordner mit selbsterklärendem Code
 -   Fish Shell Funktion `cr` für schnelles Compile & Run
+
+## References
+
+-   [Type syntax in the language C: an object lesson in syntactic innovation](https://dl.acm.org/doi/pdf/10.1145/947626.947627)
