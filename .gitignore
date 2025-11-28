@@ -1,0 +1,21 @@
+# Ignore build artifacts and editor backups
+
+# macOS
+.DS_Store
+
+# dSYMs and debug folders
+*.dSYM/
+
+# compiled binaries and object files
+*.o
+*.out
+*.exe
+
+# project-specific compiled executables
+/22_realloc/realloc
+/23_dynstrcpy/dynstrcpy
+
+# temp/editor
+*~
+*.swp
+.vscode/
