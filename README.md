@@ -77,9 +77,15 @@ Die vollständige Roadmap findest du in [`roadmap.md`](./roadmap.md). Sie ist in
     -   Null‑Termination und sichere Größe berücksichtigt
     -   **Status:** Erfolgreich abgeschlossen
 
+
 ### Stufe 3 — Micro-Projekte
 
--   ⏳ Noch nicht begonnen
+-   🚧 **3.1 Mini-Vector (wie std::vector light)** (`31_strucvec/`)
+    -   Dynamischer Integer-Vector mit `int* data`, `size_t capacity`, `size_t length`
+    -   Funktionen: `init_vector()`, `push_back()`, `free_vector()`
+    -   Speicher wächst bei Bedarf mit `realloc`, Ownership und Fehlerbehandlung
+    -   **Status:** In Bearbeitung
+
 
 ### Stufe 4 — Abschlussprojekt
 
